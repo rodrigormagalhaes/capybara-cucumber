@@ -1,0 +1,15 @@
+default: -p pretty -p homolog -p chrome -p html
+
+
+pretty: --format pretty
+progress: --format progress
+html: --format html --out=report.html
+
+homolog: ENVIRONMENT=homolog
+prod: ENVIRONMENT=prod
+chrome: BROWSER=chrome
+chrome_headless: BROWSER=chrome_headless
+firefox: BROWSER=firefox
+firefox_headless: BROWSER=firefox_headless
+safari: BROWSER=safari
+ie: BROWSER=ie
