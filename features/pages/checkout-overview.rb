@@ -4,10 +4,8 @@ class CheckoutOverView < SitePrism::Page
 
     element :btnFinish, 'a[href="./checkout-complete.html"]'
 
-    def confirmCheckout()
-        
+    def confirmCheckout()        
         btnFinish.click()
-
     end
 
 end

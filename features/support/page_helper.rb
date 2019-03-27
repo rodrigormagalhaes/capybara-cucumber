@@ -6,4 +6,24 @@ module PageObjects
         @login ||= Login.new
     end
 
+    def cart
+        @cart ||= Cart.new
+    end
+
+    def checkoutInformation
+        @checkoutInformation ||= CheckoutInformation.new
+    end
+
+    def checkoutComplete
+        @checkoutComplete ||= CheckoutComplete.new
+    end
+
+    def checkoutOverView
+        @checkoutOverView ||= CheckoutOverView.new
+    end
+
+    def products
+        @products ||= Products.new
+    end
+
 end

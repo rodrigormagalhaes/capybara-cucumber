@@ -1,0 +1,10 @@
+USER = 'standard_user'
+PASSWORD = 'secret_sauce'
+FIRST_NAME = 'Rodrigo'
+LAST_NAME = 'Magalhães'
+ZIP_CODE = '99999999'
+CONFIRMATION_MESSAGE = 'THANK YOU FOR YOUR ORDER'
+DELIVERY_MESSAGE = 'Your order has been dispatched, and will arrive just as fast as the pony can get there!'
+CHECKOUT_COMPLETE_URL = CONFIG['default_url'] + '/checkout-complete.html'
+PRODUCTS_URL = CONFIG['default_url'] + '/inventory.html'
+

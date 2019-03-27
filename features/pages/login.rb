@@ -4,13 +4,14 @@ class Login < SitePrism::Page
 
     element :userName, '#user-name'
     element :password, '#password'
-    element :btn_login, 'input[value="LOGIN"]'
+    element :btnLogin, 'input[value="LOGIN"]'
+    element :errorMsg, '#login_button_container h3'
 
     def doLogin(userNameValue, passwordValue)
         userName.set(userNameValue)
         password.set(passwordValue)
 
-        btn_login.click()
+        btnLogin.click()
     end
 
 end
