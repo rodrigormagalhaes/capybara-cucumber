@@ -3,7 +3,7 @@ default: -p pretty -p homolog -p chrome -p html
 
 pretty: --format pretty
 progress: --format progress
-html: --format html --out=report.html
+html: --format html --out=report/report.html
 
 homolog: ENVIRONMENT=homolog
 prod: ENVIRONMENT=prod
