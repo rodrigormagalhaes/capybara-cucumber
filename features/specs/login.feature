@@ -7,6 +7,7 @@ Funcionalidade: Login
     Contexto: 
         Dado que estou na página de login
     
+    
     Esquema do Cenário: Login com sucesso
         Quando efetuo login com '<userName>' e '<password>'
         Então sou redirecionado para página de Produtos
@@ -17,14 +18,24 @@ Funcionalidade: Login
         | problem_user            | secret_sauce |
         | performance_glitch_user | secret_sauce |
 
+    
     @blocked
-    Cenário: Tentativa de login com usuário bloqueado
-        Quando realizo login com usuário bloqueado
+    Esquema do Cenário: Tentativa de login com usuário bloqueado
+        Quando efetuo login com '<userName>' e '<password>'
         Então login não é realizado
         E é exibida mensagem de usuário bloqueado
+    
+    Exemplos:
+        | userName                | password     |
+        | locked_out_user         | secret_sauce |
 
+    
     @invalid
-    Cenário: Tentativa de login com usuário inexistente
-        Quando realizo login com usuário inexistente
+    Esquema do Cenário: Tentativa de login com usuário inexistente
+        Quando efetuo login com '<userName>' e '<password>'
         Então login não é realizado
         E é exibida mensagem de usuário inexistente
+    
+    Exemplos:
+        | userName                | password     |
+        | rodrigo                 | secret_sauce |
