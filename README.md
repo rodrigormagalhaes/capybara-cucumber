@@ -15,7 +15,7 @@ cucumber
 ```
 
 - **Relatório html**: 
-  > ./report/report.html
+  > ./report.html
 
 
 #### Tecnologias
