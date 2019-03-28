@@ -1,6 +1,6 @@
 ### Automação de testes com Capybara e Cucumber
 
-- **Pré requisito**
+- **Pré requisitos**
   - > [Ruby](https://www.ruby-lang.org/pt/documentation/installation/) 
   - > [Bundler](https://bundler.io/)
 
