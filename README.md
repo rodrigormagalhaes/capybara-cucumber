@@ -3,6 +3,7 @@
 - **Pré requisitos**
   - > [Ruby](https://www.ruby-lang.org/pt/documentation/installation/) 
   - > [Bundler](https://bundler.io/)
+  - > [ChromeDriver](http://chromedriver.chromium.org/downloads)
 
 - **Instalar**:
 ```
