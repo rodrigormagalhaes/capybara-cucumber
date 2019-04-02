@@ -1,14 +1,9 @@
 pipeline {
-    agent any
+    agent { 
+        docker { image 'ruby:2.4.2' } 
+    }
     
-    stages {
-
-        stage("Fix the permission issue") {
-            steps {
-                sh 'docker pull ruby:2.4.2'
-            }
-        }
-        
+    stages {        
         stage('build') {
             steps {
                 sh 'ruby --version'
