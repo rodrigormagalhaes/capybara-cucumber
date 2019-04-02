@@ -16,5 +16,15 @@ pipeline {
             }
         }
 
+        stage(name: "Config") {
+			sh "bundle install"
+
+		}
+
+        stage(name: "Test") {
+			sh "cucumber"
+
+		}
+
     }
 }
