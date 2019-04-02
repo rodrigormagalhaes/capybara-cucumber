@@ -1,11 +1,15 @@
 pipeline {
     agent { 
-        docker { 
-            image 'ruby:2.4.2' 
-             args '-u root:sudo'
-        } 
-    }
+        docker { image 'ruby:2.4.2' } }
+    
     stages {
+
+        stage("Fix the permission issue") {
+            steps {
+                sh "sudo chown root:jenkins /run/docker.sock"
+            }
+        }
+        
         stage('build') {
             steps {
                 sh 'ruby --version'
