@@ -3,17 +3,18 @@ pipeline {
         docker { image 'ruby:2.4.2' } 
     }
     
-    stages {        
+    stages {
+        stage('clone') {
+            steps {
+                checkout scm
+            }            
+        }
+
         stage('build') {
             steps {
                 sh 'ruby --version'
             }
         }
 
-        stage('clone') {
-            steps {
-                checkout scm
-            }            
-        }
     }
 }
