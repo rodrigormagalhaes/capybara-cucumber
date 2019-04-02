@@ -4,16 +4,19 @@ pipeline {
     }
     
     stages {        
+        
+        stage('clone') {
+            steps {
+                checkout scm
+            }            
+        }
+        
         stage('build') {
             steps {
                 sh 'ruby --version'
             }
         }
 
-        stage('clone') {
-            steps {
-                checkout scm
-            }            
-        }
+
     }
 }
