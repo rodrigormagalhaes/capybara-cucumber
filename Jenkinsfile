@@ -1,13 +1,12 @@
 pipeline {
     agent { 
-        docker { image 'ruby:2.4.2' } }
+        any
     
     stages {
 
         stage("Fix the permission issue") {
-            agent any
             steps {
-                sh "sudo chown root:jenkins /run/docker.sock"
+                sh 'sudo docker pull ruby:2.4.2'
             }
         }
         
