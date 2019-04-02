@@ -24,6 +24,7 @@ pipeline {
                 sh 'tar -xvzf geckodriver*'
                 sh 'chmod +x geckodriver'
                 sh 'cp geckodriver /usr/local/bin/'
+                sh 'sudo apt install firefox'
             }
 			
 
