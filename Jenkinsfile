@@ -5,7 +5,7 @@ pipeline {
 
         stage("Fix the permission issue") {
             steps {
-                sh 'sudo docker pull ruby:2.4.2'
+                sh 'docker pull ruby:2.4.2'
             }
         }
         
