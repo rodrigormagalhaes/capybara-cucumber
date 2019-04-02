@@ -9,5 +9,11 @@ pipeline {
                 sh 'ruby --version'
             }
         }
+
+        stage('clone') {
+            steps {
+                checkout scm
+            }            
+        }
     }
 }
