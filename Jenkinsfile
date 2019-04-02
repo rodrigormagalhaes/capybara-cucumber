@@ -17,14 +17,17 @@ pipeline {
         }
 
         stage(name: "Config") {
-			sh "bundle install"
+            steps {
+                sh "bundle install"
+            }
+			
 
 		}
 
         stage(name: "Test") {
-			sh "cucumber"
-
+			steps {
+                sh "cucumber"
+            }
 		}
-
     }
 }
