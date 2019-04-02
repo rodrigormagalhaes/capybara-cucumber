@@ -1,4 +1,4 @@
-default: -p pretty -p homolog -p chrome
+default: -p pretty -p homolog -p chrome_headless
 
 pretty: --format pretty
 progress: --format progress
