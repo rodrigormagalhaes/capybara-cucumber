@@ -6,7 +6,6 @@ pipeline {
     stages {        
         stage('build') {
             steps {
-                sh 'docker run ruby'
                 sh 'ruby --version'
             }
         }
