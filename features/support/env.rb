@@ -3,6 +3,7 @@ require 'selenium-webdriver'
 require 'site_prism'
 require_relative 'page_helper.rb'
 require 'capybara-screenshot/cucumber'
+require 'webdrivers'
 
 ENVIRONMENT = ENV['ENVIRONMENT']
 BROWSER = ENV['BROWSER']
