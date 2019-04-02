@@ -8,7 +8,9 @@ pipeline {
         }
 
         stage('clone') {
-            checkout scm
+            steps {
+                checkout scm
+            }            
         }
     }
 }
