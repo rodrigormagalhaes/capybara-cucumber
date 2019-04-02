@@ -4,29 +4,29 @@ pipeline {
     }
     
     stages {
-        stage('clone') {
+        stage('Clone') {
             steps {
                 checkout scm
             }            
         }
 
-        stage('build') {
+        stage('Build') {
             steps {
                 sh 'ruby --version'
             }
         }
 
-        stage(name: "Config") {
+        stage('Config') {
             steps {
-                sh "bundle install"
+                sh 'bundle install'
             }
 			
 
 		}
 
-        stage(name: "Test") {
+        stage('Test') {
 			steps {
-                sh "cucumber"
+                sh 'cucumber'
             }
 		}
     }
