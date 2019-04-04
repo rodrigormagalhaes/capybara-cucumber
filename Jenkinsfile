@@ -1,14 +1,17 @@
 pipeline {
-    agent any
+    agent { docker { image 'ruby' } }
     
     stages {
+        stage('Config') {
+            steps {
+                sh 'gem install bundler'
+                sh 'bundle install'
+            }	
+		}
+
         stage('Test') {
 			steps {
-                script {
-                    docker.node {
-                        docker.script.sh(script: "docker run -i rodrigormagalhaes/httparty-cucumber", returnStdout: false)
-        			}
-    			}
+                sh 'cucumber'
             }
 		}
     }
