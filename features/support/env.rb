@@ -12,7 +12,7 @@ CONFIG = YAML.load_file(File.dirname(__FILE__) + "/environments/#{ENVIRONMENT}.y
 
 World(PageObjects)
 
-Selenium::WebDriver::Firefox::Binary.path = "/usr/bin/firefox"
+Selenium::WebDriver::Firefox::Binary.path = "/usr/lib/firefox"
 
 Capybara.save_path = Dir.pwd + "/screenshots"
 
