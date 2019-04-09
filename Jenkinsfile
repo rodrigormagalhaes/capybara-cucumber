@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Config') {
             steps {
+                sh 'ruby -v'
                 sh 'gem install bundler'
                 sh 'bundle install'
             }	
@@ -21,6 +22,12 @@ pipeline {
                     fileIncludePattern: "**/report.json",
                     jsonReportDirectory: '.'
             }
+        }
+    }
+
+    post { 
+        always { 
+            cleanWs()
         }
     }
 }
